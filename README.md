@@ -6,6 +6,23 @@
 
 **在线体验**：`https://<your-name>.github.io/co-evolution-canvas/`（发布后替换）
 
+![共演战略画布 · 首页](docs/screenshots/01-home-desktop.png)
+
+<p align="center">
+  <img src="docs/screenshots/04-canvas-desktop.png" width="49%" alt="战略画布">
+  <img src="docs/screenshots/05-cases.png" width="49%" alt="案例库">
+</p>
+<p align="center">
+  <img src="docs/screenshots/03-theory-matrix.png" width="49%" alt="48 演化矩阵">
+  <img src="docs/screenshots/07-workspace.png" width="49%" alt="我的工作台">
+</p>
+<p align="center">
+  <img src="docs/screenshots/08-home-mobile.png" width="24%" alt="手机首页">
+  <img src="docs/screenshots/09-canvas-mobile.png" width="24%" alt="手机画布">
+  <img src="docs/screenshots/10-case-mobile.png" width="24%" alt="手机案例">
+  <img src="docs/screenshots/11-home-dark.png" width="24%" alt="深色模式">
+</p>
+
 ---
 
 ## 这是什么
