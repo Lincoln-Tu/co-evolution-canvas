@@ -1,0 +1,13 @@
+{
+  "name": "co-evolution-strategy-canvas",
+  "version": "1.0.0",
+  "description": "共演战略画布 · 基于路江涌教授方法论的 EMBA 交互式学习与推演工具",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["strategy", "co-evolution", "EMBA", "canvas", "education"],
+  "license": "MIT"
+}

@@ -1,0 +1,208 @@
+/* ==========================================================================
+   共演战略画布 · Design Tokens
+   气质：既有东方纸墨的静气，也有生命演化的动势。
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- 品牌主色：深墨蓝 + 鎏金 ---- */
+  --ink-900: #071521;
+  --ink-800: #0E2233;
+  --ink-700: #16334A;
+  --ink-600: #23506B;
+  --ink-500: #3B6C88;
+  --ink-400: #6E93A8;
+  --ink-300: #A7BECA;
+  --ink-200: #D2DFE5;
+  --ink-100: #E9F0F3;
+  --ink-050: #F3F7F8;
+
+  --gold-600: #8A6A12;
+  --gold-500: #B58A1C;
+  --gold-400: #C9A227;
+  --gold-300: #DFC468;
+  --gold-200: #EEDFA8;
+  --gold-100: #F8F0D2;
+
+  /* ---- 四要素语义色（人/事 × 内/外）---- */
+  --el-user: #C0563A;      /* 用户 · 外 · 人 —— 陶土 */
+  --el-user-soft: #F6E3DB;
+  --el-user-ink: #8E3A24;
+  --el-org: #2E7D74;       /* 组织 · 内 · 人 —— 青碧 */
+  --el-org-soft: #DCEFEB;
+  --el-org-ink: #1B574F;
+  --el-product: #A87F16;   /* 产品 · 内 · 事 —— 秋金 */
+  --el-product-soft: #F5EBCB;
+  --el-product-ink: #6E530B;
+  --el-market: #3C5E8C;    /* 市场 · 外 · 事 —— 靛蓝 */
+  --el-market-soft: #DEE6F3;
+  --el-market-ink: #27436A;
+
+  /* ---- 中性色 / 表面 ---- */
+  --paper: #FBF9F4;
+  --paper-2: #F5F1E8;
+  --paper-3: #EDE7DA;
+  --surface: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #F4F1E9;
+  --line: #E2DCCF;
+  --line-strong: #CFC7B6;
+
+  --text-1: #101E28;
+  --text-2: #3D5260;
+  --text-3: #6B7F8B;
+  --text-4: #93A3AD;
+  --text-invert: #F7F4EC;
+
+  /* ---- 状态 ---- */
+  --ok: #2E7D5B;
+  --ok-soft: #E0F0E8;
+  --warn: #B5761A;
+  --warn-soft: #F8ECD6;
+  --danger: #B23B3B;
+  --danger-soft: #F7E3E1;
+  --info: #2E6CA8;
+  --info-soft: #E1EBF5;
+
+  /* ---- 字体 ---- */
+  --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei UI", "Microsoft YaHei",
+               "Noto Sans SC", "Source Han Sans SC", "Hiragino Sans GB", system-ui, -apple-system,
+               "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STZhongsong", "STSong",
+                "SimSun", Georgia, "Times New Roman", serif;
+  --font-mono: "SF Mono", "JetBrains Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+  --font-num: "DIN Alternate", "Bahnschrift", "Avenir Next Condensed", "Segoe UI", var(--font-sans);
+
+  /* ---- 字号（clamp 流体）---- */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: clamp(1.0625rem, 0.2vw + 1rem, 1.1875rem);
+  --fs-xl: clamp(1.25rem, 0.5vw + 1.1rem, 1.5rem);
+  --fs-2xl: clamp(1.5rem, 1.1vw + 1.2rem, 2rem);
+  --fs-3xl: clamp(1.875rem, 2vw + 1.3rem, 2.75rem);
+  --fs-4xl: clamp(2.375rem, 3.4vw + 1.4rem, 4rem);
+  --fs-5xl: clamp(2.75rem, 5vw + 1.2rem, 5.25rem);
+
+  /* ---- 空间 ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 48px;
+  --sp-10: 64px;
+  --sp-11: 80px;
+  --sp-12: 112px;
+
+  --pad-x: clamp(16px, 4vw, 48px);
+  --content-max: 1240px;
+  --content-wide: 1440px;
+  --header-h: 64px;
+
+  /* ---- 圆角 ---- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-2xl: 28px;
+  --r-pill: 999px;
+
+  /* ---- 阴影 ---- */
+  --sh-xs: 0 1px 2px rgba(16, 30, 40, 0.06);
+  --sh-sm: 0 2px 6px rgba(16, 30, 40, 0.07), 0 1px 2px rgba(16, 30, 40, 0.05);
+  --sh-md: 0 8px 24px -6px rgba(16, 30, 40, 0.14), 0 2px 6px rgba(16, 30, 40, 0.06);
+  --sh-lg: 0 20px 48px -12px rgba(16, 30, 40, 0.2), 0 4px 12px rgba(16, 30, 40, 0.07);
+  --sh-xl: 0 32px 80px -20px rgba(16, 30, 40, 0.3), 0 8px 24px rgba(16, 30, 40, 0.08);
+  --ring: 0 0 0 3px rgba(201, 162, 39, 0.32);
+  --ring-ink: 0 0 0 3px rgba(35, 80, 107, 0.22);
+
+  /* ---- 动效 ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --dur-1: 140ms;
+  --dur-2: 220ms;
+  --dur-3: 380ms;
+  --dur-4: 640ms;
+
+  /* ---- 层级 ---- */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-sheet: 300;
+  --z-toast: 400;
+}
+
+/* ==========================  深色模式  ========================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ink-900: #EAF2F6;
+  --ink-800: #D6E4EB;
+  --ink-700: #BED2DC;
+  --ink-600: #9FBBCB;
+  --ink-500: #7FA1B4;
+  --ink-400: #5F8296;
+  --ink-300: #3F5E72;
+  --ink-200: #273F50;
+  --ink-100: #1A2E3D;
+  --ink-050: #12232F;
+
+  --gold-600: #F0DEA0;
+  --gold-500: #E4CB78;
+  --gold-400: #D8B95A;
+  --gold-300: #B99A3E;
+  --gold-200: #6E5A22;
+  --gold-100: #3A3015;
+
+  --el-user: #E07A55;
+  --el-user-soft: #3A231B;
+  --el-user-ink: #F2B49C;
+  --el-org: #4FB3A5;
+  --el-org-soft: #122E2A;
+  --el-org-ink: #9ADCD1;
+  --el-product: #D6AC48;
+  --el-product-soft: #33290F;
+  --el-product-ink: #EFD58F;
+  --el-market: #6E93C7;
+  --el-market-soft: #1A2739;
+  --el-market-ink: #AFC5E5;
+
+  --paper: #0A1721;
+  --paper-2: #0E1E2B;
+  --paper-3: #152836;
+  --surface: #102230;
+  --surface-raised: #162C3B;
+  --surface-sunken: #081219;
+  --line: #1E3646;
+  --line-strong: #2B4A5D;
+
+  --text-1: #EDF3F6;
+  --text-2: #B9CBD5;
+  --text-3: #8AA2B0;
+  --text-4: #6A8391;
+  --text-invert: #0A1721;
+
+  --ok: #5CB995;
+  --ok-soft: #12302A;
+  --warn: #D9A24E;
+  --warn-soft: #2F2713;
+  --danger: #E17070;
+  --danger-soft: #331A1A;
+  --info: #6FA6DD;
+  --info-soft: #14263A;
+
+  --sh-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sh-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --sh-md: 0 10px 28px -8px rgba(0, 0, 0, 0.6);
+  --sh-lg: 0 24px 56px -16px rgba(0, 0, 0, 0.7);
+  --sh-xl: 0 36px 90px -24px rgba(0, 0, 0, 0.8);
+  --ring: 0 0 0 3px rgba(216, 185, 90, 0.38);
+  --ring-ink: 0 0 0 3px rgba(126, 161, 180, 0.3);
+}

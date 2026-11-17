@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0E2233">
+  <title>共演战略画布 · 企业生命周期战略推演工作台</title>
+  <meta name="description" content="基于北京大学路江涌教授《共演战略画布》方法论的人机交互学习与推演工具：四要素 × 四阶段，沉浸式案例，课前·课中·课后全场景。">
+  <meta name="author" content="共演战略画布 · Co-Evolution Strategy Canvas">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="共演战略画布 · 让四要素在企业生命周期中共同演化">
+  <meta property="og:description" content="四要素 × 四阶段 × 48 个战略演化。为 EMBA 课前、课中、课后设计的沉浸式战略推演工具。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#/" aria-label="共演战略画布 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M6 25c4.2 0 4.6-18 9.4-18C20 7 20.6 25 26 25" stroke="url(#lg1)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M6 20.5c5 0 5.4-13 10.2-13 4.8 0 5.4 13 9.8 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45"/>
+            <circle cx="15.4" cy="17.6" r="2.2" fill="currentColor"/>
+            <defs><linearGradient id="lg1" x1="6" y1="25" x2="26" y2="7"><stop stop-color="#C9A227"/><stop offset="1" stop-color="#2E7D74"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>共演战略画布</strong>
+          <small>Co-Evolution Strategy Canvas</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="#/" data-nav="home"><span>总览</span></a>
+        <a href="#/theory" data-nav="theory"><span>理论</span></a>
+        <a href="#/canvas" data-nav="canvas"><span>画布</span></a>
+        <a href="#/cases" data-nav="cases"><span>案例</span></a>
+        <a href="#/quiz" data-nav="quiz"><span>测评</span></a>
+        <a href="#/workspace" data-nav="workspace"><span>工作台</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深浅色" title="切换深浅色">
+          <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8Z"/></svg>
+        </button>
+        <button class="icon-btn" id="shareBtn" type="button" aria-label="分享" title="分享">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 13.4 15.4 17M15.4 7 8.6 10.6"/><circle cx="6.2" cy="12" r="2.4"/><circle cx="17.8" cy="5.6" r="2.4"/><circle cx="17.8" cy="18.4" r="2.4"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="read-progress" id="readProgress" aria-hidden="true"></div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="移动端导航">
+      <a href="#/" data-nav="home"><b>01</b> 总览 <small>方法论一页看懂</small></a>
+      <a href="#/theory" data-nav="theory"><b>02</b> 理论图谱 <small>四要素 · 四阶段 · 48演化</small></a>
+      <a href="#/canvas" data-nav="canvas"><b>03</b> 战略画布 <small>为自己的企业推演</small></a>
+      <a href="#/cases" data-nav="cases"><b>04</b> 案例库 <small>真实企业的关键抉择</small></a>
+      <a href="#/quiz" data-nav="quiz"><b>05</b> 战略测评 <small>检验理解与判断</small></a>
+      <a href="#/workspace" data-nav="workspace"><b>06</b> 我的工作台 <small>课前·课中·课后</small></a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <p>基于路江涌教授《共演战略画布》方法论构建的教学工具，非官方版本。</p>
+    </div>
+  </div>
+
+  <main id="main" class="app-main" tabindex="-1">
+    <div class="view" id="viewRoot"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>共演战略画布</strong>
+        <p>从「人与事、内与外」两个维度出发，管理用户、组织、产品、市场四要素在企业生命周期中的共同演化。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>学习</h4>
+          <a href="#/theory">理论图谱</a>
+          <a href="#/cases">案例库</a>
+          <a href="#/quiz">战略测评</a>
+        </div>
+        <div>
+          <h4>实践</h4>
+          <a href="#/canvas">战略画布</a>
+          <a href="#/workspace">我的工作台</a>
+          <a href="#/theory#curve">双 S 曲线</a>
+        </div>
+        <div>
+          <h4>关于</h4>
+          <a href="https://www.gsm.pku.edu.cn/" target="_blank" rel="noopener noreferrer">北大光华</a>
+          <a href="#/about">方法论说明</a>
+          <a href="#/about#credits">致谢与声明</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 共演战略画布 · 教学用途</span>
+      <span>理论基石：路江涌《共演战略画布》（机械工业出版社，2019）</span>
+    </div>
+  </footer>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog class="sheet" id="globalSheet" aria-labelledby="sheetTitle">
+    <div class="sheet-head">
+      <h2 id="sheetTitle">详情</h2>
+      <button class="icon-btn" data-close-sheet type="button" aria-label="关闭">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
