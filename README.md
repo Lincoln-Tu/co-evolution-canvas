@@ -122,17 +122,40 @@ co-evolution-canvas/
 └── .tools/                 # 开发期 QA 脚本（不参与站点运行）
 ```
 
+## 本地修改自动同步
+
+仓库已内置「保存即同步」能力：本地任何文件改动，会在约 1–2 秒内自动提交并更新到 GitHub，Pages 随之重新构建。
+
+```powershell
+.\autosync.ps1 -Status      # 查看待同步差异
+.\autosync.ps1 -Once        # 立即同步一次
+.\autosync.ps1 -Watch       # 前台守护
+.\autosync.ps1 -Install     # 注册开机自启（已安装：计划任务 CoEvoCanvasAutoSync）
+.\autosync.ps1 -Uninstall   # 取消开机自启
+```
+
+同步实现走 **GitHub REST API**（`.tools/sync.mjs`）：先按 git blob SHA 比对本地与远端，只上传变更文件、删除已移除文件，再创建 commit 并更新 `refs/heads/main`。相比 `git push`，它不依赖 `github.com:443`，在 `github.com` 被间歇阻断的网络环境下依然稳定。
+
+- 令牌：`%USERPROFILE%\.coevo\token`（仅本机，不入仓库）
+- 日志：`%USERPROFILE%\.coevo\sync.log`
+- 失败自动重试（30 秒后）
+
 ## 部署到 GitHub Pages
 
+首次发布（已执行，可在换机器后复用）：
+
 ```bash
-git init
-git add .
-git commit -m "feat: 共演战略画布 v1.0"
+node .tools/publish.mjs --device <设备码> --repo co-evolution-canvas
+```
+
+或使用传统方式：
+
+```bash
+git init && git add . && git commit -m "feat: 共演战略画布 v1.0"
 git branch -M main
 git remote add origin https://github.com/<your-name>/co-evolution-canvas.git
 git push -u origin main
 
-# 开启 Pages（main 分支根目录）
 gh api -X POST repos/<your-name>/co-evolution-canvas/pages \
   -f source[branch]=main -f source[path]=/
 ```
