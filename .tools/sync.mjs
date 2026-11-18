@@ -36,7 +36,10 @@ async function log(msg, silent = false) {
   const line = `[${new Date().toLocaleString('zh-CN')}] ${msg}`;
   try {
     await mkdir(STATE_DIR, { recursive: true });
-    await appendFile(LOG_FILE, line + '\n', 'utf8');
+    // 首次写入加 BOM，保证 Windows PowerShell 以 UTF-8 正确读取中文
+    let prefix = '';
+    try { await stat(LOG_FILE); } catch { prefix = '\uFEFF'; }
+    await appendFile(LOG_FILE, prefix + line + '\n', 'utf8');
   } catch { /* ignore */ }
   if (!silent) console.log(line);
 }
