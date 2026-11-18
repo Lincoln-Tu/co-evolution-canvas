@@ -4,7 +4,9 @@
 
 **理论基石**：路江涌《共演战略：重新定义企业生命周期》（2018）、《共演战略画布》（2019，机械工业出版社）
 
-**在线体验**：`https://<your-name>.github.io/co-evolution-canvas/`（发布后替换）
+**在线体验**：https://Lincoln-Tu.github.io/co-evolution-canvas/
+
+**源码仓库**：https://github.com/Lincoln-Tu/co-evolution-canvas
 
 ![共演战略画布 · 首页](docs/screenshots/01-home-desktop.png)
 
