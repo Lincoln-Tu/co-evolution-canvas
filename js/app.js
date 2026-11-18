@@ -69,6 +69,7 @@ function main() {
   // 路由变化时关闭移动菜单、更新标题
   document.addEventListener('dsh:route', (e) => {
     closeMenu();
+    if (e.detail.path.startsWith('/cases/')) return; // 案例详情页自行设置标题
     const titles = {
       '/': '共演战略画布 · 企业生命周期战略推演工作台',
       '/theory': '理论图谱 · 四要素与四阶段',

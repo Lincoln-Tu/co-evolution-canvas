@@ -207,6 +207,7 @@ export function renderCaseDetail(root, meta) {
   const prev = CASES[(idx - 1 + CASES.length) % CASES.length];
   const next = CASES[(idx + 1) % CASES.length];
   const stageColor = (s) => stageByKey[s]?.color || 'var(--gold-500)';
+  document.title = `${c.name} · 案例 · 共演战略画布`;
 
   root.innerHTML = `
     <div class="case-hero" style="--cc:${c.color}">
