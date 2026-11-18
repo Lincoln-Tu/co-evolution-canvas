@@ -180,3 +180,7 @@ gh api -X POST repos/<your-name>/co-evolution-canvas/pages \
 ## License
 
 代码以 [MIT](LICENSE) 发布；文字内容与案例整理部分建议以 CC BY-NC 4.0 使用，转载请注明本工具与原作者。
+
+## 更新日志
+
+- **v1.0**（2026-11-18）：四要素 × 四阶段画布、48 演化矩阵、双 S 曲线、10 个案例 + 4 个反例、15 题测评、一页纸备忘录、自动同步。
