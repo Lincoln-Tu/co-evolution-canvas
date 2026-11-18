@@ -580,6 +580,15 @@
 .canvas-toolbar .tb-title { font-family: var(--font-serif); font-size: var(--fs-lg); font-weight: 700; margin-right: auto; display: flex; align-items: center; gap: 10px; }
 .canvas-toolbar .tb-title span { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 400; color: var(--text-3); }
 
+@media (max-width: 560px) {
+  .canvas-toolbar { gap: 8px; padding: 8px var(--pad-x); }
+  .canvas-toolbar .tb-title { font-size: var(--fs-base); width: 100%; margin-right: 0; }
+  .canvas-toolbar .tb-title span { font-size: 0.625rem; }
+  .canvas-toolbar .btn { min-height: 36px; padding: 6px 10px; font-size: 0.6875rem; }
+  .canvas-toolbar .search-box { flex: 1 1 120px; max-width: none; }
+  .canvas-toolbar .search-box .input { min-height: 36px; padding-block: 6px; font-size: 0.75rem; }
+}
+
 .canvas-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
