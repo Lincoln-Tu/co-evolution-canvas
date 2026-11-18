@@ -248,6 +248,11 @@
   box-shadow: var(--sh-xs);
 }
 
+@media (max-width: 560px) {
+  .segmented { flex-wrap: wrap; overflow-x: visible; }
+  .segmented button { flex: 1 0 auto; padding: 7px 10px; font-size: var(--fs-xs); }
+}
+
 /* 评分器 */
 .rating { display: inline-flex; gap: 4px; align-items: center; }
 .rating button {
